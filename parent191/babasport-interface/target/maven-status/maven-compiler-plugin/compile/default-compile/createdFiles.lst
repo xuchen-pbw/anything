@@ -1,0 +1,5 @@
+cn\itcast\core\service\product\BrandService.class
+cn\itcast\core\service\product\ProductService.class
+cn\itcast\core\service\TestTbService.class
+cn\itcast\core\service\product\SkuService.class
+cn\itcast\core\service\product\UploadService.class
