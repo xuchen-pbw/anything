@@ -1,8 +1,8 @@
-cn\itcast\core\dao\order\DetailDao.class
 cn\itcast\core\dao\TestTbDao.class
-cn\itcast\core\dao\user\BuyerDao.class
-cn\itcast\core\dao\product\SkuDao.class
 cn\itcast\core\dao\order\OrderDao.class
-cn\itcast\core\dao\product\ProductDao.class
-cn\itcast\core\dao\product\ColorDao.class
+cn\itcast\core\dao\product\SkuDao.class
 cn\itcast\core\dao\product\BrandDao.class
+cn\itcast\core\dao\product\ProductDao.class
+cn\itcast\core\dao\order\DetailDao.class
+cn\itcast\core\dao\user\BuyerDao.class
+cn\itcast\core\dao\product\ColorDao.class

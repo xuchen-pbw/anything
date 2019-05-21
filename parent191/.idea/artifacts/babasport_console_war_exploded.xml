@@ -1,12 +1,24 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="babasport-console:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/babasport_console_war_exploded</output-path>
+    <output-path>$PROJECT_DIR$/babasport-console/target/babasport-console</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="babasport-console" />
         </element>
         <element id="directory" name="lib">
+          <element id="archive" name="babasport-interface-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="babasport-interface" />
+          </element>
+          <element id="archive" name="babasport-dao-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="babasport-dao" />
+          </element>
+          <element id="archive" name="babasport-pojo-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="babasport-pojo" />
+          </element>
+          <element id="archive" name="babasport-common-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="babasport-common" />
+          </element>
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.1.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.1.3.RELEASE" />
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
@@ -32,8 +44,6 @@
           <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:1.2.2" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.8" />
           <element id="library" level="project" name="Maven: com.alibaba:druid:1.0.9" />
-          <element id="library" level="module" name="Maven: com.alibaba:jconsole:1.8.0" module-name="babasport-console" />
-          <element id="library" level="module" name="Maven: com.alibaba:tools:1.8.0" module-name="babasport-console" />
           <element id="library" level="project" name="Maven: commons-collections:commons-collections:1.0" />
           <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.2.2" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.1" />
@@ -87,6 +97,9 @@
           <element id="library" level="project" name="Maven: org.apache.geronimo.specs:geronimo-jta_1.0.1B_spec:1.0.1" />
           <element id="library" level="project" name="Maven: commons-pool:commons-pool:1.6" />
         </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/babasport-console/target/babasport-console/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="babasport-console/web/Web" />
     </root>

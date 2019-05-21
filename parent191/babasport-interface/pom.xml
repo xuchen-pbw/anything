@@ -16,7 +16,7 @@
     <dependencies>
         <dependency>
             <groupId>cn.itcast.babasport</groupId>
-            <artifactId>babasport-pojo</artifactId>
+            <artifactId>babasport-dao</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
