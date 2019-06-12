@@ -6,7 +6,10 @@
     <file url="file://$PROJECT_DIR$/babasport-console" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/babasport-dao" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/babasport-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/babasport-login" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/babasport-login" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/babasport-pojo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/babasport-portal" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/babasport-service-product" charset="UTF-8" />
   </component>
 </project>

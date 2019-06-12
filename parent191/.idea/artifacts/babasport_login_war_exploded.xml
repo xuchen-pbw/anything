@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="babasport-login:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/babasport_login_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="babasport-login/web/Web" />
+    </root>
+  </artifact>
+</component>

@@ -39,7 +39,7 @@ public class UploadController {
 		
 		String path = uploadService.uploadPic(pic.getBytes(), pic.getOriginalFilename(), pic.getSize());
 		
-		String url = Constants.IMG_URL + path;
+		String url = Constants.IMG_URL +":8888"+ path;
 		
 		JSONObject  jo = new JSONObject();
 		jo.put("url", url);
@@ -58,7 +58,7 @@ public class UploadController {
 		
 		for (MultipartFile pic : pics) {
 			String path = uploadService.uploadPic(pic.getBytes(), pic.getOriginalFilename(), pic.getSize());
-			String url = Constants.IMG_URL + path;
+			String url = Constants.IMG_URL +":8888"+ path;
 			urls.add(url);
 		}
 		return urls;
@@ -77,7 +77,7 @@ public class UploadController {
 			
 			String path = uploadService.uploadPic(pic.getBytes(), pic.getOriginalFilename(), pic.getSize());
 			
-			String url = Constants.IMG_URL + path;
+			String url = Constants.IMG_URL +":8888"+ path;
 			
 			JSONObject  jo = new JSONObject();
 			jo.put("error", 0);

@@ -1,9 +1,19 @@
 package cn.itcast.core.service.product;
 
+import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
+import javax.jms.JMSException;
+import javax.jms.Message;
+import javax.jms.Session;
+
+import org.apache.solr.client.solrj.SolrServer;
+import org.apache.solr.client.solrj.SolrServerException;
+import org.apache.solr.common.SolrInputDocument;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,6 +24,7 @@ import cn.itcast.core.bean.product.Product;
 import cn.itcast.core.bean.product.ProductQuery;
 import cn.itcast.core.bean.product.ProductQuery.Criteria;
 import cn.itcast.core.bean.product.Sku;
+import cn.itcast.core.bean.product.SkuQuery;
 import cn.itcast.core.dao.product.ColorDao;
 import cn.itcast.core.dao.product.ProductDao;
 import cn.itcast.core.dao.product.SkuDao;
@@ -78,8 +89,6 @@ public class ProductServiceImpl implements ProductService{
 		colorQuery.createCriteria().andParentIdNotEqualTo(0L);
 		return colorDao.selectByExample(colorQuery);
 	}
-	
-	
 	@Autowired
 	private SkuDao skuDao;
 	@Autowired
@@ -127,20 +136,28 @@ public class ProductServiceImpl implements ProductService{
 			}
 		}
 	}
+	@Autowired
+	private JmsTemplate jmsTemplate;
 	//上架
 	public void isShow(Long[] ids){
 		Product product = new Product();
 		//上架
 		product.setIsShow(true);
-		for (Long id : ids) {
+		for (final Long id : ids) {
 			product.setId(id);
 			//商品状态的变更
 			productDao.updateByPrimaryKeySelective(product);
-			
-			
-			
-			
-			//TODO 保存商品信息到SOlr服务器
+			//发送消息 到ActiveMQ中   brandId
+//			jmsTemplate.send("brandId", messageCreator);
+			jmsTemplate.send(new MessageCreator(){
+
+				@Override
+				public Message createMessage(Session session) throws JMSException {
+					// TODO Auto-generated method stub
+					return session.createTextMessage(String.valueOf(id));
+				}
+				
+			});
 			
 			//TODO 静态化
 		}

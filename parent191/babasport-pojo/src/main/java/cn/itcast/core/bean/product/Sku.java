@@ -53,10 +53,23 @@ public class Sku implements Serializable {
     
     //附加颜色对象
     private Color color;
+    private Product product;
+    
+    
+    
+    
     
     
 
-    public Color getColor() {
+    public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+
+	public Color getColor() {
 		return color;
 	}
 

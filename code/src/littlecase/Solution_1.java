@@ -1,42 +1,48 @@
 package littlecase;
-
+/*大数相乘*/
 import java.util.Scanner;
 public class Solution_1 {
-    private String getHL;
-    private String[] HLs;
-    private int[] HL;
-
-
-    public static void main(String[] args) {
-            System.out.println(new Solution_1().get());
-    }
-
-
-    public int[][] get(){
-        /**
-         * 创建数组行列数
-         */
-        HL = new int[2];
-        Scanner get = new Scanner(System.in);
-        System.out.println("请问想输入矩阵的规格是？(输入格式：行x列,例如5x5)");
-        getHL =get.nextLine();
-        HLs =getHL.split("x");
-        for (int i = 0;i <2;i++){
-            HL[i] = Integer.valueOf(HLs[i]);
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        while (sc.hasNext()){
+            String str1 = sc.next();
+            String str2 = sc.next();
+            StringBuffer resultStr = bigNumFunction(str1,str2);
+            System.out.println(resultStr);
         }
-        int[][] array = new int[HL[0]][HL[1]];
+    }
+    public static StringBuffer bigNumFunction(String str1,String str2){
+        char[] arr1 = str1.toCharArray();
+        char[] arr2 = str2.toCharArray();
+        int[] arrInt1 = new int[arr1.length];
+        int[] arrInt2 = new int[arr2.length];
+        int[] result = new  int[arr1.length + arr2.length];
+        for(int i=0;i<=arr1.length-1;i++){
+            arrInt1[i] = arr1[i] - '0';
+            //或者 arrInt1[i] = Integer.parseInt(arr1[i]);
+        }
+        for(int i=0;i<=arr2.length-1;i++){
+            arrInt2[i] = arr2[i] - '0';
+        }
 
-        /**
-         * 初始化数组
-         */
-        for (int i = 0;i < HL[0];i++){
-            String temp = get.nextLine();
-            String[] temps = temp.split(" +");
-            for (int j = 0;j < HL[1];j++){
-                array[i][j]=Integer.valueOf(temps[j]);
+        for(int i=0;i<=arr1.length-1;i++){
+            for(int j=0;j<=arr2.length-1;j++){
+                result[i+j] = result[i+j] + arrInt1[i]*arrInt2[j];
             }
         }
-        return array;
+
+        for(int i=result.length-1;i>0;i--){
+            if(result[i]/10 >= 1){
+                result[i-1] = result[i-1] + result[i]/10;
+                result[i] = result[i] % 10;
+            }
+        }
+
+        StringBuffer sb = new StringBuffer();
+        for(int i=0;i<result.length-1;i++){
+            sb.append(result[i]);
+        }
+        return sb;
     }
 
 }

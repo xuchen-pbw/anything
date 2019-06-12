@@ -19,4 +19,7 @@ public interface BrandService {
 	public void updateBrandById(Brand brand);
 	//删除
 	public void deletes(Long[] ids);// List<Long> ids;
+	
+	//查询 从Redis中
+	public List<Brand> selectBrandListFromRedis();
 }

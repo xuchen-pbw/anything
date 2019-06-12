@@ -10,9 +10,15 @@
         <module name="babasport-console" />
         <module name="babasport-dao" />
         <module name="babasport-interface" />
+        <module name="babasport-login" />
         <module name="babasport-pojo" />
+        <module name="babasport-portal" />
         <module name="babasport-service-product" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="babasport-login" target="1.7" />
+      <module name="babasportlogin" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>

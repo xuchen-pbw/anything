@@ -74,5 +74,11 @@ public class ProductController {
 		productService.isShow(ids);
 		return "forward:/product/list.do";
 	}
+	@RequestMapping(value = "/type/list.do")
+	public String tlist(){
+		return "type/list";
+	}
+	
+	
 	
 }

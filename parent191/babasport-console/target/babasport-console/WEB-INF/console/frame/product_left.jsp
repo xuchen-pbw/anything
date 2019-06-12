@@ -22,7 +22,7 @@
      <ul class="w-lful">
 		<li><a href="/product/list.do" target="rightFrame">商品管理</a></li>
 		<li><a href="/brand/list.do" target="rightFrame">品牌管理</a></li>
-		<li><a href="../type/list.jsp" target="rightFrame">商品分类</a></li>
+		<li><a href="/type/list.do" target="rightFrame">商品分类</a></li>
 		<li><a href="../type/list.jsp" target="rightFrame">商品参数</a></li>
 		<li><a href="../type/list.jsp" target="rightFrame">规格管理</a></li>
 		<li><a href="../type/list.jsp" target="rightFrame">商品属性</a></li>

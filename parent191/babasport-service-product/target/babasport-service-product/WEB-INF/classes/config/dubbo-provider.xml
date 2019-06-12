@@ -30,14 +30,17 @@
 	<!-- 3：dubbo://192.168.39.80:20880  默认  设置提供服务的端口号 -->
 	<dubbo:protocol port="20880" name="dubbo"/>
 	<!-- 4： 暴露实现类-->
+
 	<dubbo:service interface="cn.itcast.core.service.TestTbService" ref="testTbService"/>
 	<dubbo:service interface="cn.itcast.core.service.product.BrandService" ref="brandService"/>
 	<dubbo:service interface="cn.itcast.core.service.product.UploadService" ref="uploadService"/>
 	<dubbo:service interface="cn.itcast.core.service.product.ProductService" ref="productService"/>
 	<dubbo:service interface="cn.itcast.core.service.product.SkuService" ref="skuService"/>
-	
-	
-	
-	
-		
+
+	<dubbo:service interface="cn.itcast.core.service.CmsService" ref="cmsService"/>
+
+	<dubbo:service interface="cn.itcast.core.service.user.BuyerService" ref="buyerService"/>
+	<dubbo:service interface="cn.itcast.core.service.user.SessionProvider" ref="sessionProvider"/>
+
+	<dubbo:service interface="cn.itcast.core.service.SearchService" ref="searchService"/>
 </beans>

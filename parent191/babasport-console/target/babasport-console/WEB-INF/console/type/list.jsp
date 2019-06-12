@@ -5,6 +5,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <title>babasport-list</title>
+<script type="text/javascript">
+$(function(){
+	$("#browser").treeview({
+		url: "v_tree.do"
+	});
+});
+</script>
 </head>
 <body>
 <div class="box-positon">
@@ -13,5 +20,6 @@
 </div>
 <div class="body-box">
 </div>
+<ul id="browser" class="filetree"></ul>
 </body>
 </html>
