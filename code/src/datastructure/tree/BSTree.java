@@ -1,4 +1,4 @@
-package datastructure;
+package datastructure.tree;
 
 /**
  * Java 语言: 二叉查找树
