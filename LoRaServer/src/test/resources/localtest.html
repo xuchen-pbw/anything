@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" xmlns="https://www.w3.org/1999/xhtml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.thymeleaf.org ">
+<head>
+    <meta charset="utf-8"/>
+    <title>灯控制说明</title>
+</head>
+<!-- BEGIN BODY -->
+
+<body class="childBody">
+
+<!-- BEGIN CONTAINER -->
+可以使用postman对灯控制进行简单测试
+本地测试地址：127.0.0.1:8080/msg，各功能的json数据包如下：
+<hr>
+<p>
+    1.灯的开关<br>
+    {"type":"write.req","device_id":"9a-b6-ff-00","key":"0.general_onoff","value":"1"}<br>
+    说明：device_id 终端Id value=1 开 value=0 关
+<hr>
+2.灯立即获取状态<br>
+
+{"type":"write.req","device_id":"9a-b6-ff-00","key":"0.general.onoff","mark":"acquireStatus"}
+<hr>
+3.改变上报周期<br>
+{"type":"write.req","device_id":"9a-b6-ff-00","key":"0.general.onoff","mark":"{\"changeRate\":{\"hour\":00,\"minute\":21,\"second\":00}}"}
+
+<hr>
+
+</p>
+</body>
+<!-- END BODY -->
+</html>

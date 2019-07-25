@@ -1,0 +1,456 @@
+2019/07/01-19:42:48:787 [main] INFO  com.lynch.LoRaServer- Starting LoRaServer on LynchdeMacBook-Pro.local with PID 95565 (/Users/lynch/Documents/Idea/LoRaServer/target/classes started by lynch in /Users/lynch/Documents/Idea/LoRaServer)
+2019/07/01-19:42:48:793 [main] INFO  com.lynch.LoRaServer- No active profile set, falling back to default profiles: default
+2019/07/01-19:42:51:763 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2019/07/01-19:42:51:764 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data repositories in DEFAULT mode.
+2019/07/01-19:42:52:042 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 264ms. Found 6 repository interfaces.
+2019/07/01-19:42:52:064 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2019/07/01-19:42:52:065 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data repositories in DEFAULT mode.
+2019/07/01-19:42:52:097 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.DeviceRepo.
+2019/07/01-19:42:52:100 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.FSKModEndRepo.
+2019/07/01-19:42:52:102 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.GateWayStatRepo.
+2019/07/01-19:42:52:103 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.GatewayRepo.
+2019/07/01-19:42:52:106 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.LightRepo.
+2019/07/01-19:42:52:107 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.LoraModEndRepo.
+2019/07/01-19:42:52:108 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 30ms. Found 0 repository interfaces.
+2019/07/01-19:42:52:512 [main] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor- No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2019/07/01-19:42:52:523 [main] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor- No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2019/07/01-19:42:52:531 [main] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor- No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2019/07/01-19:42:52:633 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$73d098fb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-19:42:52:715 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ad64dacd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-19:42:52:760 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$185695fc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-19:42:52:784 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-19:42:53:432 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2019/07/01-19:42:53:585 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2019/07/01-19:42:53:586 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019/07/01-19:42:53:597 [main] INFO  org.apache.catalina.core.AprLifecycleListener- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lynch/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019/07/01-19:42:53:710 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2019/07/01-19:42:53:710 [main] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 4803 ms
+2019/07/01-19:42:54:499 [main] INFO  org.hibernate.jpa.internal.util.LogHelper- HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019/07/01-19:42:54:617 [main] INFO  org.hibernate.Version- HHH000412: Hibernate Core {5.3.7.Final}
+2019/07/01-19:42:54:619 [main] INFO  org.hibernate.cfg.Environment- HHH000206: hibernate.properties not found
+2019/07/01-19:42:54:856 [main] INFO  org.hibernate.annotations.common.Version- HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019/07/01-19:42:55:075 [main] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Starting...
+2019/07/01-19:42:55:483 [main] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Start completed.
+2019/07/01-19:42:55:506 [main] INFO  org.hibernate.dialect.Dialect- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019/07/01-19:42:57:053 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean- Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019/07/01-19:42:57:768 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator- HHH000397: Using ASTQueryTranslatorFactory
+2019/07/01-19:42:58:663 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2019/07/01-19:42:58:719 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019/07/01-19:42:59:476 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver- Exposing 2 endpoint(s) beneath base path '/actuator'
+2019/07/01-19:42:59:603 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler- Initializing ExecutorService 'taskScheduler'
+2019/07/01-19:42:59:736 [main] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019/07/01-19:42:59:737 [main] INFO  org.springframework.integration.channel.PublishSubscribeChannel- Channel 'application.errorChannel' has 1 subscriber(s).
+2019/07/01-19:42:59:737 [main] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- started _org.springframework.integration.errorLogger
+2019/07/01-19:42:59:739 [main] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory- Attempting to connect to: [rabbitmq.lynch.fun:5672]
+2019/07/01-19:43:00:388 [main] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory- Created new connection: rabbitConnectionFactory#3f1ed068:0/SimpleConnection@538f45f1 [delegate=amqp://admin@47.102.41.135:5672/, localPort= 50459]
+2019/07/01-19:43:01:258 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2019/07/01-19:43:01:261 [main] INFO  com.lynch.LoRaServer- Started LoRaServer in 13.43 seconds (JVM running for 14.856)
+2019/07/01-19:43:01:820 [RMI TCP Connection(1)-127.0.0.1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019/07/01-19:43:01:821 [RMI TCP Connection(1)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2019/07/01-19:43:01:834 [RMI TCP Connection(1)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 13 ms
+2019/07/01-19:43:18:510 [nioEventLoopGroup-7-1] INFO  com.lynch.handler.MessageTcpHandler- gateway  which ip = 127.0.0.1 channelActive!
+2019/07/01-19:45:23:504 [nioEventLoopGroup-7-1] INFO  com.lynch.handler.MessageTcpHandler- gateway  which ip = 127.0.0.1 channelInactive!
+2019/07/01-19:45:26:077 [Thread-32] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer- Waiting for workers to finish.
+2019/07/01-19:45:26:712 [Thread-32] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer- Successfully waited for workers to finish.
+2019/07/01-19:45:26:719 [Thread-32] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019/07/01-19:45:26:720 [Thread-32] INFO  org.springframework.integration.channel.PublishSubscribeChannel- Channel 'application.errorChannel' has 0 subscriber(s).
+2019/07/01-19:45:26:720 [Thread-32] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- stopped _org.springframework.integration.errorLogger
+2019/07/01-19:45:26:722 [Thread-32] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler- Shutting down ExecutorService 'taskScheduler'
+2019/07/01-19:45:26:732 [Thread-32] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer- Shutdown ignored - container is not active already
+2019/07/01-19:45:26:732 [Thread-32] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Shutting down ExecutorService 'applicationTaskExecutor'
+2019/07/01-19:45:26:738 [Thread-32] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean- Closing JPA EntityManagerFactory for persistence unit 'default'
+2019/07/01-19:45:26:740 [Thread-32] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Shutdown initiated...
+2019/07/01-19:45:26:748 [Thread-32] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Shutdown completed.
+2019/07/01-19:45:31:671 [main] INFO  com.lynch.LoRaServer- Starting LoRaServer on LynchdeMacBook-Pro.local with PID 95746 (/Users/lynch/Documents/Idea/LoRaServer/target/classes started by lynch in /Users/lynch/Documents/Idea/LoRaServer)
+2019/07/01-19:45:31:674 [main] INFO  com.lynch.LoRaServer- No active profile set, falling back to default profiles: default
+2019/07/01-19:45:33:492 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2019/07/01-19:45:33:493 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data repositories in DEFAULT mode.
+2019/07/01-19:45:33:590 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 90ms. Found 6 repository interfaces.
+2019/07/01-19:45:33:603 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2019/07/01-19:45:33:603 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data repositories in DEFAULT mode.
+2019/07/01-19:45:33:626 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.DeviceRepo.
+2019/07/01-19:45:33:627 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.FSKModEndRepo.
+2019/07/01-19:45:33:628 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.GateWayStatRepo.
+2019/07/01-19:45:33:629 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.GatewayRepo.
+2019/07/01-19:45:33:629 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.LightRepo.
+2019/07/01-19:45:33:631 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.LoraModEndRepo.
+2019/07/01-19:45:33:631 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 21ms. Found 0 repository interfaces.
+2019/07/01-19:45:34:011 [main] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor- No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2019/07/01-19:45:34:028 [main] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor- No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2019/07/01-19:45:34:036 [main] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor- No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2019/07/01-19:45:34:106 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$27e890ea] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-19:45:34:239 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$617cd2bc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-19:45:34:288 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$cc6e8deb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-19:45:34:313 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-19:45:34:707 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2019/07/01-19:45:34:840 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2019/07/01-19:45:34:841 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019/07/01-19:45:34:848 [main] INFO  org.apache.catalina.core.AprLifecycleListener- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lynch/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019/07/01-19:45:34:942 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2019/07/01-19:45:34:942 [main] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 3218 ms
+2019/07/01-19:45:35:473 [main] INFO  org.hibernate.jpa.internal.util.LogHelper- HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019/07/01-19:45:35:530 [main] INFO  org.hibernate.Version- HHH000412: Hibernate Core {5.3.7.Final}
+2019/07/01-19:45:35:531 [main] INFO  org.hibernate.cfg.Environment- HHH000206: hibernate.properties not found
+2019/07/01-19:45:35:643 [main] INFO  org.hibernate.annotations.common.Version- HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019/07/01-19:45:35:772 [main] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Starting...
+2019/07/01-19:45:35:869 [main] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Start completed.
+2019/07/01-19:45:35:883 [main] INFO  org.hibernate.dialect.Dialect- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019/07/01-19:45:36:847 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean- Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019/07/01-19:45:37:588 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator- HHH000397: Using ASTQueryTranslatorFactory
+2019/07/01-19:45:38:335 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2019/07/01-19:45:38:370 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019/07/01-19:45:38:830 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver- Exposing 2 endpoint(s) beneath base path '/actuator'
+2019/07/01-19:45:38:921 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler- Initializing ExecutorService 'taskScheduler'
+2019/07/01-19:45:39:034 [main] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019/07/01-19:45:39:034 [main] INFO  org.springframework.integration.channel.PublishSubscribeChannel- Channel 'application.errorChannel' has 1 subscriber(s).
+2019/07/01-19:45:39:034 [main] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- started _org.springframework.integration.errorLogger
+2019/07/01-19:45:39:035 [main] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory- Attempting to connect to: [rabbitmq.lynch.fun:5672]
+2019/07/01-19:45:39:284 [main] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory- Created new connection: rabbitConnectionFactory#6e4c0d8c:0/SimpleConnection@96075c0 [delegate=amqp://admin@47.102.41.135:5672/, localPort= 50524]
+2019/07/01-19:45:39:929 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2019/07/01-19:45:39:931 [main] INFO  com.lynch.LoRaServer- Started LoRaServer in 8.661 seconds (JVM running for 9.455)
+2019/07/01-19:45:40:174 [nioEventLoopGroup-7-1] INFO  com.lynch.handler.MessageTcpHandler- gateway  which ip = 127.0.0.1 channelActive!
+2019/07/01-19:45:40:260 [RMI TCP Connection(4)-127.0.0.1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019/07/01-19:45:40:260 [RMI TCP Connection(4)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2019/07/01-19:45:40:270 [RMI TCP Connection(4)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 10 ms
+2019/07/01-19:46:35:901 [Thread-22] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer- Waiting for workers to finish.
+2019/07/01-19:46:36:118 [Thread-22] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer- Successfully waited for workers to finish.
+2019/07/01-19:46:36:123 [Thread-22] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019/07/01-19:46:36:125 [Thread-22] INFO  org.springframework.integration.channel.PublishSubscribeChannel- Channel 'application.errorChannel' has 0 subscriber(s).
+2019/07/01-19:46:36:125 [Thread-22] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- stopped _org.springframework.integration.errorLogger
+2019/07/01-19:46:36:125 [Thread-22] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler- Shutting down ExecutorService 'taskScheduler'
+2019/07/01-19:46:36:138 [Thread-22] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer- Shutdown ignored - container is not active already
+2019/07/01-19:46:36:140 [Thread-22] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Shutting down ExecutorService 'applicationTaskExecutor'
+2019/07/01-19:46:36:146 [nioEventLoopGroup-7-1] INFO  com.lynch.handler.MessageTcpHandler- gateway  which ip = 127.0.0.1 channelInactive!
+2019/07/01-19:46:36:168 [Thread-22] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean- Closing JPA EntityManagerFactory for persistence unit 'default'
+2019/07/01-19:46:36:171 [Thread-22] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Shutdown initiated...
+2019/07/01-19:46:36:178 [Thread-22] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Shutdown completed.
+2019/07/01-19:46:43:196 [main] INFO  com.lynch.LoRaServer- Starting LoRaServer on LynchdeMacBook-Pro.local with PID 95828 (/Users/lynch/Documents/Idea/LoRaServer/target/classes started by lynch in /Users/lynch/Documents/Idea/LoRaServer)
+2019/07/01-19:46:43:199 [main] INFO  com.lynch.LoRaServer- No active profile set, falling back to default profiles: default
+2019/07/01-19:46:45:289 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2019/07/01-19:46:45:290 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data repositories in DEFAULT mode.
+2019/07/01-19:46:45:453 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 156ms. Found 6 repository interfaces.
+2019/07/01-19:46:45:482 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2019/07/01-19:46:45:484 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data repositories in DEFAULT mode.
+2019/07/01-19:46:45:532 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.DeviceRepo.
+2019/07/01-19:46:45:533 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.FSKModEndRepo.
+2019/07/01-19:46:45:535 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.GateWayStatRepo.
+2019/07/01-19:46:45:536 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.GatewayRepo.
+2019/07/01-19:46:45:537 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.LightRepo.
+2019/07/01-19:46:45:540 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.LoraModEndRepo.
+2019/07/01-19:46:45:541 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 45ms. Found 0 repository interfaces.
+2019/07/01-19:46:46:342 [main] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor- No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2019/07/01-19:46:46:354 [main] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor- No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2019/07/01-19:46:46:362 [main] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor- No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2019/07/01-19:46:46:457 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$2d8ed9b7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-19:46:46:540 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$67231b89] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-19:46:46:564 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$d214d6b8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-19:46:46:582 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-19:46:46:883 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2019/07/01-19:46:47:006 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2019/07/01-19:46:47:007 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019/07/01-19:46:47:014 [main] INFO  org.apache.catalina.core.AprLifecycleListener- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lynch/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019/07/01-19:46:47:110 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2019/07/01-19:46:47:110 [main] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 3824 ms
+2019/07/01-19:46:47:787 [main] INFO  org.hibernate.jpa.internal.util.LogHelper- HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019/07/01-19:46:47:852 [main] INFO  org.hibernate.Version- HHH000412: Hibernate Core {5.3.7.Final}
+2019/07/01-19:46:47:854 [main] INFO  org.hibernate.cfg.Environment- HHH000206: hibernate.properties not found
+2019/07/01-19:46:47:970 [main] INFO  org.hibernate.annotations.common.Version- HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019/07/01-19:46:48:184 [main] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Starting...
+2019/07/01-19:46:48:304 [main] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Start completed.
+2019/07/01-19:46:48:316 [main] INFO  org.hibernate.dialect.Dialect- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019/07/01-19:46:49:218 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean- Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019/07/01-19:46:49:903 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator- HHH000397: Using ASTQueryTranslatorFactory
+2019/07/01-19:46:50:591 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2019/07/01-19:46:50:628 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019/07/01-19:46:51:226 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver- Exposing 2 endpoint(s) beneath base path '/actuator'
+2019/07/01-19:46:51:324 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler- Initializing ExecutorService 'taskScheduler'
+2019/07/01-19:46:51:439 [main] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019/07/01-19:46:51:439 [main] INFO  org.springframework.integration.channel.PublishSubscribeChannel- Channel 'application.errorChannel' has 1 subscriber(s).
+2019/07/01-19:46:51:439 [main] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- started _org.springframework.integration.errorLogger
+2019/07/01-19:46:51:441 [main] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory- Attempting to connect to: [rabbitmq.lynch.fun:5672]
+2019/07/01-19:46:51:689 [main] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory- Created new connection: rabbitConnectionFactory#2d3ef181:0/SimpleConnection@186d6033 [delegate=amqp://admin@47.102.41.135:5672/, localPort= 50561]
+2019/07/01-19:46:52:362 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2019/07/01-19:46:52:365 [main] INFO  com.lynch.LoRaServer- Started LoRaServer in 9.798 seconds (JVM running for 11.263)
+2019/07/01-19:46:52:778 [RMI TCP Connection(1)-127.0.0.1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019/07/01-19:46:52:778 [RMI TCP Connection(1)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2019/07/01-19:46:52:793 [RMI TCP Connection(1)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 15 ms
+2019/07/01-19:47:04:773 [nioEventLoopGroup-7-1] INFO  com.lynch.handler.MessageTcpHandler- gateway  which ip = 127.0.0.1 channelActive!
+2019/07/01-19:48:21:944 [nioEventLoopGroup-7-2] INFO  com.lynch.handler.MessageTcpHandler- gateway  which ip = 127.0.0.1 channelActive!
+2019/07/01-19:48:21:966 [nioEventLoopGroup-7-2] INFO  com.lynch.handler.MessageTcpHandler- gateway  which ip = 127.0.0.1 channelInactive!
+2019/07/01-19:48:53:110 [Thread-25] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer- Waiting for workers to finish.
+2019/07/01-19:48:53:741 [Thread-25] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer- Successfully waited for workers to finish.
+2019/07/01-19:48:53:744 [Thread-25] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019/07/01-19:48:53:745 [Thread-25] INFO  org.springframework.integration.channel.PublishSubscribeChannel- Channel 'application.errorChannel' has 0 subscriber(s).
+2019/07/01-19:48:53:745 [Thread-25] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- stopped _org.springframework.integration.errorLogger
+2019/07/01-19:48:53:746 [Thread-25] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler- Shutting down ExecutorService 'taskScheduler'
+2019/07/01-19:48:53:756 [Thread-25] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer- Shutdown ignored - container is not active already
+2019/07/01-19:48:53:756 [Thread-25] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Shutting down ExecutorService 'applicationTaskExecutor'
+2019/07/01-19:48:53:757 [nioEventLoopGroup-7-1] INFO  com.lynch.handler.MessageTcpHandler- gateway  which ip = 127.0.0.1 channelInactive!
+2019/07/01-19:48:53:763 [Thread-25] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean- Closing JPA EntityManagerFactory for persistence unit 'default'
+2019/07/01-19:48:53:765 [Thread-25] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Shutdown initiated...
+2019/07/01-19:48:53:771 [Thread-25] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Shutdown completed.
+2019/07/01-19:48:58:272 [main] INFO  com.lynch.LoRaServer- Starting LoRaServer on LynchdeMacBook-Pro.local with PID 95983 (/Users/lynch/Documents/Idea/LoRaServer/target/classes started by lynch in /Users/lynch/Documents/Idea/LoRaServer)
+2019/07/01-19:48:58:276 [main] INFO  com.lynch.LoRaServer- No active profile set, falling back to default profiles: default
+2019/07/01-19:48:59:979 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2019/07/01-19:48:59:980 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data repositories in DEFAULT mode.
+2019/07/01-19:49:00:082 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 94ms. Found 6 repository interfaces.
+2019/07/01-19:49:00:093 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2019/07/01-19:49:00:094 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data repositories in DEFAULT mode.
+2019/07/01-19:49:00:110 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.DeviceRepo.
+2019/07/01-19:49:00:110 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.FSKModEndRepo.
+2019/07/01-19:49:00:111 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.GateWayStatRepo.
+2019/07/01-19:49:00:111 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.GatewayRepo.
+2019/07/01-19:49:00:112 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.LightRepo.
+2019/07/01-19:49:00:112 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.LoraModEndRepo.
+2019/07/01-19:49:00:112 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
+2019/07/01-19:49:00:369 [main] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor- No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2019/07/01-19:49:00:375 [main] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor- No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2019/07/01-19:49:00:379 [main] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor- No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2019/07/01-19:49:00:463 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$ca3c6b1b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-19:49:00:585 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3d0aced] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-19:49:00:612 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$6ec2681c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-19:49:00:623 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-19:49:00:874 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2019/07/01-19:49:01:008 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2019/07/01-19:49:01:009 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019/07/01-19:49:01:019 [main] INFO  org.apache.catalina.core.AprLifecycleListener- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lynch/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019/07/01-19:49:01:125 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2019/07/01-19:49:01:125 [main] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 2777 ms
+2019/07/01-19:49:01:709 [main] INFO  org.hibernate.jpa.internal.util.LogHelper- HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019/07/01-19:49:01:764 [main] INFO  org.hibernate.Version- HHH000412: Hibernate Core {5.3.7.Final}
+2019/07/01-19:49:01:766 [main] INFO  org.hibernate.cfg.Environment- HHH000206: hibernate.properties not found
+2019/07/01-19:49:01:934 [main] INFO  org.hibernate.annotations.common.Version- HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019/07/01-19:49:02:132 [main] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Starting...
+2019/07/01-19:49:02:227 [main] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Start completed.
+2019/07/01-19:49:02:236 [main] INFO  org.hibernate.dialect.Dialect- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019/07/01-19:49:03:211 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean- Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019/07/01-19:49:03:991 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator- HHH000397: Using ASTQueryTranslatorFactory
+2019/07/01-19:49:04:762 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2019/07/01-19:49:04:801 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019/07/01-19:49:05:291 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver- Exposing 2 endpoint(s) beneath base path '/actuator'
+2019/07/01-19:49:05:394 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler- Initializing ExecutorService 'taskScheduler'
+2019/07/01-19:49:05:517 [main] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019/07/01-19:49:05:517 [main] INFO  org.springframework.integration.channel.PublishSubscribeChannel- Channel 'application.errorChannel' has 1 subscriber(s).
+2019/07/01-19:49:05:517 [main] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- started _org.springframework.integration.errorLogger
+2019/07/01-19:49:05:518 [main] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory- Attempting to connect to: [rabbitmq.lynch.fun:5672]
+2019/07/01-19:49:05:770 [main] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory- Created new connection: rabbitConnectionFactory#57272109:0/SimpleConnection@7474196 [delegate=amqp://admin@47.102.41.135:5672/, localPort= 50619]
+2019/07/01-19:49:06:413 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2019/07/01-19:49:06:415 [main] INFO  com.lynch.LoRaServer- Started LoRaServer in 8.6 seconds (JVM running for 9.472)
+2019/07/01-19:49:06:878 [RMI TCP Connection(3)-127.0.0.1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019/07/01-19:49:06:878 [RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2019/07/01-19:49:06:887 [RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 9 ms
+2019/07/01-19:49:26:885 [nioEventLoopGroup-7-1] INFO  com.lynch.handler.MessageTcpHandler- gateway  which ip = 127.0.0.1 channelActive!
+2019/07/01-19:49:27:626 [nioEventLoopGroup-7-1] INFO  com.lynch.handler.MessageTcpHandler- gateway  which ip = 127.0.0.1 channelInactive!
+2019/07/01-19:50:09:622 [Thread-22] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer- Waiting for workers to finish.
+2019/07/01-19:50:10:622 [Thread-22] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer- Successfully waited for workers to finish.
+2019/07/01-19:50:10:625 [Thread-22] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019/07/01-19:50:10:626 [Thread-22] INFO  org.springframework.integration.channel.PublishSubscribeChannel- Channel 'application.errorChannel' has 0 subscriber(s).
+2019/07/01-19:50:10:626 [Thread-22] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- stopped _org.springframework.integration.errorLogger
+2019/07/01-19:50:10:626 [Thread-22] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler- Shutting down ExecutorService 'taskScheduler'
+2019/07/01-19:50:10:632 [Thread-22] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer- Shutdown ignored - container is not active already
+2019/07/01-19:50:10:634 [Thread-22] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Shutting down ExecutorService 'applicationTaskExecutor'
+2019/07/01-19:50:10:642 [Thread-22] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean- Closing JPA EntityManagerFactory for persistence unit 'default'
+2019/07/01-19:50:10:643 [Thread-22] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Shutdown initiated...
+2019/07/01-19:50:10:650 [Thread-22] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Shutdown completed.
+2019/07/01-20:07:26:155 [main] INFO  com.lynch.LoRaServer- Starting LoRaServer on LynchdeMacBook-Pro.local with PID 97302 (/Users/lynch/Documents/Idea/LoRaServer/target/classes started by lynch in /Users/lynch/Documents/Idea/LoRaServer)
+2019/07/01-20:07:26:159 [main] INFO  com.lynch.LoRaServer- No active profile set, falling back to default profiles: default
+2019/07/01-20:07:27:730 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2019/07/01-20:07:27:731 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data repositories in DEFAULT mode.
+2019/07/01-20:07:27:849 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 107ms. Found 6 repository interfaces.
+2019/07/01-20:07:27:866 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2019/07/01-20:07:27:867 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data repositories in DEFAULT mode.
+2019/07/01-20:07:27:893 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.DeviceRepo.
+2019/07/01-20:07:27:894 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.FSKModEndRepo.
+2019/07/01-20:07:27:896 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.GateWayStatRepo.
+2019/07/01-20:07:27:896 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.GatewayRepo.
+2019/07/01-20:07:27:897 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.LightRepo.
+2019/07/01-20:07:27:898 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.LoraModEndRepo.
+2019/07/01-20:07:27:898 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+2019/07/01-20:07:28:404 [main] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor- No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2019/07/01-20:07:28:435 [main] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor- No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2019/07/01-20:07:28:451 [main] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor- No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2019/07/01-20:07:28:524 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$df6f7546] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-20:07:28:590 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1903b718] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-20:07:28:610 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$83f57247] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-20:07:28:624 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-20:07:29:104 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2019/07/01-20:07:29:130 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2019/07/01-20:07:29:130 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019/07/01-20:07:29:222 [main] INFO  org.apache.catalina.core.AprLifecycleListener- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lynch/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019/07/01-20:07:29:355 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2019/07/01-20:07:29:356 [main] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 3105 ms
+2019/07/01-20:07:29:959 [main] INFO  org.hibernate.jpa.internal.util.LogHelper- HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019/07/01-20:07:30:093 [main] INFO  org.hibernate.Version- HHH000412: Hibernate Core {5.3.7.Final}
+2019/07/01-20:07:30:095 [main] INFO  org.hibernate.cfg.Environment- HHH000206: hibernate.properties not found
+2019/07/01-20:07:30:437 [main] INFO  org.hibernate.annotations.common.Version- HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019/07/01-20:07:30:650 [main] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Starting...
+2019/07/01-20:07:31:384 [main] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Start completed.
+2019/07/01-20:07:31:404 [main] INFO  org.hibernate.dialect.Dialect- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019/07/01-20:07:34:299 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean- Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019/07/01-20:07:35:223 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator- HHH000397: Using ASTQueryTranslatorFactory
+2019/07/01-20:07:35:917 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2019/07/01-20:07:35:964 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019/07/01-20:07:36:597 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver- Exposing 2 endpoint(s) beneath base path '/actuator'
+2019/07/01-20:07:36:703 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler- Initializing ExecutorService 'taskScheduler'
+2019/07/01-20:07:36:831 [main] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019/07/01-20:07:36:831 [main] INFO  org.springframework.integration.channel.PublishSubscribeChannel- Channel 'application.errorChannel' has 1 subscriber(s).
+2019/07/01-20:07:36:831 [main] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- started _org.springframework.integration.errorLogger
+2019/07/01-20:07:36:833 [main] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory- Attempting to connect to: [rabbitmq.lynch.fun:5672]
+2019/07/01-20:07:38:387 [main] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory- Created new connection: rabbitConnectionFactory#58434b19:0/SimpleConnection@323eecf8 [delegate=amqp://admin@47.102.41.135:5672/, localPort= 51236]
+2019/07/01-20:07:39:056 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2019/07/01-20:07:39:058 [main] INFO  com.lynch.LoRaServer- Started LoRaServer in 13.4 seconds (JVM running for 14.746)
+2019/07/01-20:07:39:294 [RMI TCP Connection(5)-127.0.0.1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019/07/01-20:07:39:294 [RMI TCP Connection(5)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2019/07/01-20:07:39:308 [RMI TCP Connection(5)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 13 ms
+2019/07/01-20:10:02:009 [Thread-32] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer- Waiting for workers to finish.
+2019/07/01-20:10:02:483 [Thread-32] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer- Successfully waited for workers to finish.
+2019/07/01-20:10:02:487 [Thread-32] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019/07/01-20:10:02:487 [Thread-32] INFO  org.springframework.integration.channel.PublishSubscribeChannel- Channel 'application.errorChannel' has 0 subscriber(s).
+2019/07/01-20:10:02:487 [Thread-32] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- stopped _org.springframework.integration.errorLogger
+2019/07/01-20:10:02:488 [Thread-32] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler- Shutting down ExecutorService 'taskScheduler'
+2019/07/01-20:10:02:496 [Thread-32] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer- Shutdown ignored - container is not active already
+2019/07/01-20:10:02:497 [Thread-32] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Shutting down ExecutorService 'applicationTaskExecutor'
+2019/07/01-20:10:02:502 [Thread-32] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean- Closing JPA EntityManagerFactory for persistence unit 'default'
+2019/07/01-20:10:02:505 [Thread-32] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Shutdown initiated...
+2019/07/01-20:10:02:514 [Thread-32] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Shutdown completed.
+2019/07/01-20:17:10:411 [main] WARN  org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer- 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/lynch/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/lynch/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019/07/01-20:17:10:434 [main] INFO  com.lynch.HttpPostTest- Starting HttpPostTest on LynchdeMacBook-Pro.local with PID 97933 (started by lynch in /Users/lynch/Documents/Idea/LoRaServer)
+2019/07/01-20:17:10:435 [main] INFO  com.lynch.HttpPostTest- No active profile set, falling back to default profiles: default
+2019/07/01-20:17:12:349 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2019/07/01-20:17:12:352 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data repositories in DEFAULT mode.
+2019/07/01-20:17:12:686 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 320ms. Found 6 repository interfaces.
+2019/07/01-20:17:12:708 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2019/07/01-20:17:12:710 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data repositories in DEFAULT mode.
+2019/07/01-20:17:12:747 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.DeviceRepo.
+2019/07/01-20:17:12:748 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.FSKModEndRepo.
+2019/07/01-20:17:12:749 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.GateWayStatRepo.
+2019/07/01-20:17:12:750 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.GatewayRepo.
+2019/07/01-20:17:12:751 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.LightRepo.
+2019/07/01-20:17:12:754 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.LoraModEndRepo.
+2019/07/01-20:17:12:755 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 26ms. Found 0 repository interfaces.
+2019/07/01-20:17:13:456 [main] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor- No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2019/07/01-20:17:13:468 [main] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor- No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2019/07/01-20:17:13:479 [main] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor- No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2019/07/01-20:17:13:607 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$569c81e9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-20:17:13:731 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9030c3bb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-20:17:13:799 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$fb227eea] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-20:17:13:839 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-20:17:14:397 [main] INFO  org.hibernate.jpa.internal.util.LogHelper- HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019/07/01-20:17:14:545 [main] INFO  org.hibernate.Version- HHH000412: Hibernate Core {5.3.7.Final}
+2019/07/01-20:17:14:547 [main] INFO  org.hibernate.cfg.Environment- HHH000206: hibernate.properties not found
+2019/07/01-20:17:14:917 [main] INFO  org.hibernate.annotations.common.Version- HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019/07/01-20:17:15:213 [main] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Starting...
+2019/07/01-20:17:16:145 [main] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Start completed.
+2019/07/01-20:17:16:170 [main] INFO  org.hibernate.dialect.Dialect- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019/07/01-20:17:18:559 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean- Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019/07/01-20:17:19:017 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator- HHH000397: Using ASTQueryTranslatorFactory
+2019/07/01-20:17:22:396 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2019/07/01-20:17:22:624 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019/07/01-20:17:24:523 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver- Exposing 2 endpoint(s) beneath base path '/actuator'
+2019/07/01-20:17:24:719 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler- Initializing ExecutorService 'taskScheduler'
+2019/07/01-20:17:24:856 [main] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019/07/01-20:17:24:856 [main] INFO  org.springframework.integration.channel.PublishSubscribeChannel- Channel 'application.errorChannel' has 1 subscriber(s).
+2019/07/01-20:17:24:857 [main] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- started _org.springframework.integration.errorLogger
+2019/07/01-20:17:24:858 [main] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory- Attempting to connect to: [i-main:5672]
+2019/07/01-20:17:25:218 [main] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory- Created new connection: rabbitConnectionFactory#1e000a17:0/SimpleConnection@74e175c7 [delegate=amqp://admin@172.30.254.22:5672/, localPort= 53666]
+2019/07/01-20:17:25:838 [main] INFO  com.lynch.HttpPostTest- Started HttpPostTest in 15.974 seconds (JVM running for 17.388)
+2019/07/01-20:17:26:980 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper- Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.lynch.LoraServerApplicationTests], using SpringBootContextLoader
+2019/07/01-20:17:26:982 [main] INFO  org.springframework.test.context.support.AbstractContextLoader- Could not detect default resource locations for test class [com.lynch.LoraServerApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019/07/01-20:17:26:982 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils- Could not detect default configuration classes for test class [com.lynch.LoraServerApplicationTests]: LoraServerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019/07/01-20:17:26:985 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper- Found @SpringBootConfiguration com.lynch.LoRaServer for test class com.lynch.LoraServerApplicationTests
+2019/07/01-20:17:26:987 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper- Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019/07/01-20:17:26:989 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper- Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@10f60e36, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@8ad182c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7e84af34, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@218e186b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@12925d2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@612531a3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3a83cfbc, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6b9fc5c7, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@23d07ad3, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6b30ff23, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4fea23d6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5ace6611]
+2019/07/01-20:17:27:030 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper- Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.lynch.RabbitTest], using SpringBootContextLoader
+2019/07/01-20:17:27:033 [main] INFO  org.springframework.test.context.support.AbstractContextLoader- Could not detect default resource locations for test class [com.lynch.RabbitTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019/07/01-20:17:27:038 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper- Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019/07/01-20:17:27:039 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper- Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1f6d3a81, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@641c8ba4, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@52667676, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@75559cd9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@39a09c0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3dbf3bc, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@626ff077, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3b850bb7, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6802c10e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@341889a1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@29693b1d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3a225534]
+2019/07/01-20:17:27:070 [main] WARN  org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer- 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/lynch/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/lynch/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019/07/01-20:17:27:071 [main] INFO  com.lynch.RabbitTest- Starting RabbitTest on LynchdeMacBook-Pro.local with PID 97933 (started by lynch in /Users/lynch/Documents/Idea/LoRaServer)
+2019/07/01-20:17:27:072 [main] INFO  com.lynch.RabbitTest- No active profile set, falling back to default profiles: default
+2019/07/01-20:17:27:560 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2019/07/01-20:17:27:560 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data repositories in DEFAULT mode.
+2019/07/01-20:17:27:598 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 38ms. Found 6 repository interfaces.
+2019/07/01-20:17:27:600 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2019/07/01-20:17:27:600 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data repositories in DEFAULT mode.
+2019/07/01-20:17:27:612 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.DeviceRepo.
+2019/07/01-20:17:27:613 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.FSKModEndRepo.
+2019/07/01-20:17:27:613 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.GateWayStatRepo.
+2019/07/01-20:17:27:613 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.GatewayRepo.
+2019/07/01-20:17:27:614 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.LightRepo.
+2019/07/01-20:17:27:614 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport- Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lynch.repository.LoraModEndRepo.
+2019/07/01-20:17:27:614 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
+2019/07/01-20:17:27:654 [main] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor- No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2019/07/01-20:17:27:655 [main] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor- No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2019/07/01-20:17:27:657 [main] INFO  org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor- No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2019/07/01-20:17:27:688 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$569c81e9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-20:17:27:742 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9030c3bb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-20:17:27:757 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$fb227eea] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-20:17:27:768 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/07/01-20:17:27:943 [main] INFO  org.hibernate.jpa.internal.util.LogHelper- HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019/07/01-20:17:27:957 [main] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-2 - Starting...
+2019/07/01-20:17:28:602 [main] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-2 - Start completed.
+2019/07/01-20:17:28:603 [main] INFO  org.hibernate.dialect.Dialect- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019/07/01-20:17:29:672 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean- Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019/07/01-20:17:29:753 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator- HHH000397: Using ASTQueryTranslatorFactory
+2019/07/01-20:17:30:673 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2019/07/01-20:17:30:689 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019/07/01-20:17:31:571 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver- Exposing 2 endpoint(s) beneath base path '/actuator'
+2019/07/01-20:17:31:795 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler- Initializing ExecutorService 'taskScheduler'
+2019/07/01-20:17:31:873 [main] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019/07/01-20:17:31:874 [main] INFO  org.springframework.integration.channel.PublishSubscribeChannel- Channel 'application.errorChannel' has 1 subscriber(s).
+2019/07/01-20:17:31:874 [main] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- started _org.springframework.integration.errorLogger
+2019/07/01-20:17:31:875 [main] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory- Attempting to connect to: [i-main:5672]
+2019/07/01-20:17:32:094 [main] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory- Created new connection: rabbitConnectionFactory#20040c6e:0/SimpleConnection@27ada0e8 [delegate=amqp://admin@172.30.254.22:5672/, localPort= 53711]
+2019/07/01-20:17:32:683 [main] INFO  com.lynch.RabbitTest- Started RabbitTest in 5.642 seconds (JVM running for 24.233)
+2019/07/01-20:17:32:897 [Thread-4] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer- Waiting for workers to finish.
+2019/07/01-20:17:32:897 [Thread-8] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer- Waiting for workers to finish.
+2019/07/01-20:17:33:726 [Thread-8] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer- Successfully waited for workers to finish.
+2019/07/01-20:17:33:731 [Thread-8] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019/07/01-20:17:33:732 [Thread-8] INFO  org.springframework.integration.channel.PublishSubscribeChannel- Channel 'application.errorChannel' has 0 subscriber(s).
+2019/07/01-20:17:33:732 [Thread-8] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- stopped _org.springframework.integration.errorLogger
+2019/07/01-20:17:33:733 [Thread-8] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler- Shutting down ExecutorService 'taskScheduler'
+2019/07/01-20:17:33:741 [Thread-8] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer- Shutdown ignored - container is not active already
+2019/07/01-20:17:33:741 [Thread-8] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Shutting down ExecutorService 'applicationTaskExecutor'
+2019/07/01-20:17:33:870 [Thread-8] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean- Closing JPA EntityManagerFactory for persistence unit 'default'
+2019/07/01-20:17:33:874 [Thread-8] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-2 - Shutdown initiated...
+2019/07/01-20:17:33:876 [Thread-4] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer- Successfully waited for workers to finish.
+2019/07/01-20:17:33:876 [Thread-4] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019/07/01-20:17:33:877 [Thread-4] INFO  org.springframework.integration.channel.PublishSubscribeChannel- Channel 'application.errorChannel' has 0 subscriber(s).
+2019/07/01-20:17:33:877 [Thread-4] INFO  org.springframework.integration.endpoint.EventDrivenConsumer- stopped _org.springframework.integration.errorLogger
+2019/07/01-20:17:33:878 [Thread-4] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler- Shutting down ExecutorService 'taskScheduler'
+2019/07/01-20:17:33:881 [Thread-4] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer- Shutdown ignored - container is not active already
+2019/07/01-20:17:33:882 [Thread-4] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Shutting down ExecutorService 'applicationTaskExecutor'
+2019/07/01-20:17:33:888 [Thread-8] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-2 - Shutdown completed.
+2019/07/01-20:17:33:963 [Thread-4] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean- Closing JPA EntityManagerFactory for persistence unit 'default'
+2019/07/01-20:17:33:964 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Shutdown initiated...
+2019/07/01-20:17:33:970 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Shutdown completed.
