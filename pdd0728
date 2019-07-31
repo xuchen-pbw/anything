@@ -82,3 +82,129 @@ public class Solution {
         return m * (n / 2);
     }
 }
+
+
+package littlecase.huawei;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+
+/**
+ *数组的拼接
+ * 目标：有多组整数数组，将它们合并成一个新的数组。
+ * 规则：每个组按顺序取出固定长度的内容合并到新的数组中，取完的内容
+ * 会删除掉，如果该行不足固定长度或者为空，则取出剩余部分的内容到新
+ * 的数组中，继续下一行。
+ * 输入描述：第一行是每次读取的固定长度
+ * 第2-n行是需要合并的数组，不同的数组用换行符分隔，数组
+ * 内用逗号分隔。
+ * 输出描述：输出一个新的数组，用逗号分隔。
+ * 样例
+ * 输入：
+ * 3
+ * 2,5,6,7,9,5,7
+ * 1,7,4,3,4
+ * 输出：
+ * 2，5，6，1，7，4，7，9，5，3，4，7
+ **/
+public class Solution_1 {
+    public static void main(String[] args) {
+        List<List<Integer>> list = new LinkedList<List<Integer>>();
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        in.nextLine();
+        do {
+            List<Integer> singleList = new ArrayList<Integer>();
+            String str = in.nextLine();
+            if (str.isEmpty())
+                break;
+            String[] line = str.split(",");
+            for (String singNum : line) {
+                singleList.add(Integer.valueOf(singNum));
+            }
+            list.add(singleList);
+        } while (true);
+        printInput(list);
+        List<Integer> outList = splitCombination(list, n);
+        for (int i = 0; i < outList.size() - 1; i++) {
+            System.out.print(outList.get(i) + ",");
+        }
+        System.out.println(outList.get(outList.size() - 1));
+
+    }
+
+    public static void printInput(List<List<Integer>> list) {
+        for (int i = 0; i < list.size(); i++) {
+            List<Integer> singleList = list.get(i);
+            for (int j = 0; j < singleList.size() - 1; j++) {
+                System.out.print(singleList.get(j) + ",");
+            }
+            System.out.println(singleList.get(singleList.size() - 1));
+        }
+
+    }
+
+    public static List<Integer> splitCombination(List<List<Integer>> list, int splitNum) {
+        List<Integer> outList = new ArrayList<Integer>();
+        while (list.size()>0){
+            for (int i = 0; i < list.size(); i++) {
+                if (list.get(i).size() >= splitNum) {
+                    for (int j = 0; j < splitNum; j++) {
+                        outList.add(list.get(i).get(j));
+//                        list.get(i).remove(0);
+                    }
+                    for (int j = 0; j < splitNum; j++) {
+                        //移除了一个，后面的所有数据都会向前移一位
+                        list.get(i).remove(0);
+                    }
+
+
+                } else {
+                    for (int j=0;j<list.get(i).size();++j){
+                        outList.add(list.get(i).get(j));
+                    }
+                    list.remove(i);
+                    i = i - 1;
+                }
+            }
+        }
+        return outList;
+    }
+}
+
+
+0729顺丰面经
+1、Object类有哪些方法
+object()空参构造，Java中规定在类定义过程中，对于未定义构造函数的类，默认会有一个无参数的构造函数，子类构造会默认调用父类的空构造。
+clone()得到某一个对象的克隆，Object o2 =  o1.clone()。
+getClass()是一个native方法，返回的是此Object对象的类对象/运行时类对象Class<?>。效果与Object.class相同。Java中有专门定义了一个类，Class，去描述其他类所具有的特性，因此，从此角度去看，类本身也都是属于Class类的对象。为与经常意义上的对象相区分，在此称之为"类对象"。
+equals()  ==与equals在Java中经常被使用，大家也都知道==与equals的区别：==表示的是变量值完成相同（对于基础类型，地址中存储的是值，引用类型则存储指向实际对象的地址）；equals表示的是对象的内容完全相同，就是用的==。重写equals()方法必须重写hasCode()方法。
+hascode()方法返回一个整形数值，表示该对象的哈希码值。hashCode()方法的作用，其主要用于增强哈希表的性能。不相等的两个对象，hashCode()返回的哈希码可能相同。
+toString()方法返回该对象的字符串表示。例如：com.corn.objectsummary.User@27ef。
+wait(...) / notify() / notifyAll()方法，这几个方法主要用于java多线程之间的协作。wait()：调用此方法所在的当前线程等待，直到在其他线程上调用此方法的主调（某一对象）的notify()/notifyAll()方法。
+空finalize( )，Object中定义finalize方法表明Java中每一个对象都将具有finalize这种行为。
+2、处理Hash冲突的方法。
+开放定址法：这种方法也称再散列法，其基本思想是：当关键字key的哈希地址p=H（key）出现冲突时，以p为基础，产生另一个哈希地址p1，如果p1仍然冲突，再以p为基础，产生另一个哈希地址p2，…，直到找出一个不冲突的哈希地址pi。
+再哈希法：这种方法是同时构造多个不同的哈希函数。发生Hash冲突时，采用不用的Hash函数技术哈希值。
+链地址法：这种方法的基本思想是将所有哈希地址为i的元素构成一个称为同义词链的单链表。链地址法适用于经常进行插入和删除的情况。
+建立公共溢出区：这种方法的基本思想是：将哈希表分为基本表和溢出表两部分，凡是和基本表发生冲突的元素，一律填入溢出表。
+3、数据库的索引。
+4、常见的排序算法，快排的实现及其使用场景。
+快排应用场景是大规模的数据排序，时间复杂度是nlog(n)。
+若n较小(如n≤50)，可采用插入或选择排序。
+若文件初始状态基本有序(指正序)，则应选用插人、冒泡或随机的排序为宜。
+若n较大，则应采用时间复杂度为O(nlgn)的排序方法：快速排序、堆排序或归并排序。
+5、synchroniezed和Lock的原理。
+    Lock底层抽象同步队列的工作原理。
+6、常见的集合及其特征。
+7、平时是通过哪些方式来学习。
+
+
+
+
+String s = "1000";
+int n = Integer.parseInt(s);
+Integer k = Integer.valueOf(s);222222
+
