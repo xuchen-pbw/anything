@@ -1,0 +1,593 @@
+package algorithm;
+
+import java.util.Scanner;
+/*动态规划  状态及状态转移方程
+数塔取数问题
+        一个高度为N的由正整数组成的三角形，从上走到下，求经过的数字和的最大值。
+        每次只能走到下一层相邻的数上，例如从第3层的6向下走，只能走到第4层的2或9上。
+        该三角形第n层有n个数字，例如：
+        第一层有一个数字：5
+        第二层有两个数字：8 4
+        第三层有三个数字：3 6 9
+        第四层有四个数字：7 2 9 5
+        最优方案是：5 + 8 + 6 + 9 = 28
+        注意:上面应该是排列成一个三角形的样子不是竖向对应的，排版问题没有显示成三角形。*/
+
+public class DP_0806 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();//数塔规模大小，用n*n矩阵抽象表示
+        int[][] dp = new int[n][n]; //dp中始终记录着到每个位置的最大值。
+        dp[0][0] = scanner.nextInt();//开始时的值
+        int max = Integer.MIN_VALUE;
+        for (int i=1; i<n; ++i){
+            for (int j=0; j<=i; ++j){
+                int num = scanner.nextInt();
+                if (j==0){
+                    dp[i][j] = dp[i-1][j] + num;
+                }else {
+                    dp[i][j] = Math.max(dp[i-1][j-1],dp[i-1][j]) + num;
+                }
+                max = Math.max(dp[i][j],max);
+
+            }
+        }
+        System.out.println(max);
+    }
+}
+
+
+
+package algorithm;
+
+import java.util.Scanner;
+/*背包问题
+一个背包的总容量为V,现在有N类物品,第i类物品的重量为weight[i],价值为value[i]
+        那么往该背包里装东西,怎样装才能使得最终包内物品的总价值最大。这里装物品主要由三种装法：
+        1、0-1背包：每类物品最多只能装一次
+        2、多重背包：每类物品都有个数限制，第i类物品最多可以装num[i]次
+        3、完全背包：每类物品可以无限次装进包内*/
+
+public class DP_0806_knapsack {
+    public static void main(String[] args) {
+
+    }
+    public static void zeroOnePack(){
+        Scanner scanner = new Scanner(System.in);
+        int n =  scanner.nextInt();
+        int capacity = scanner.nextInt();
+        int[] dp = new int[capacity+1];//状态方程，dp[i]表示在i容量下的最大价值收益。
+        int[] weight = new int[n+1];
+        int[] price = new int[n+1];
+        long max = 0;
+        for (int i=1; i<n+1; ++i){
+            weight[i] = scanner.nextInt();
+        }
+        for (int i=1; i<n+1; ++i){
+            price[i] = scanner.nextInt();
+        }
+
+        for (int i=1; i<n+1; ++i){
+            for (int j=capacity; j>0; --j){
+                if (j-weight[i]>=0)
+                    dp[j] = Math.max(dp[j], dp[j-weight[i]] + price[i]);
+                else
+                    dp[j] = dp[j];
+            }
+        }
+        for (int i=0; i<capacity+1; ++i){
+            max = max>dp[i] ? max : dp[i];
+        }
+        System.out.println(max);
+    }
+
+    /**
+     * 0-1背包问题
+     * @param V 背包容量
+     * @param N 物品种类
+     * @param weight 物品重量
+     * @param value 物品价值
+     * @return
+     */
+    public static String ZeroOnePack(int V,int N,int[] weight,int[] value){
+
+        //初始化动态规划数组
+        int[][] dp = new int[N+1][V+1];
+        //为了便于理解,将dp[i][0]和dp[0][j]均置为0，从1开始计算
+        for(int i=1;i<N+1;i++){
+            for(int j=1;j<V+1;j++){
+                //如果第i件物品的重量大于背包容量j,则不装入背包
+                //由于weight和value数组下标都是从0开始,故注意第i个物品的重量为weight[i-1],价值为value[i-1]
+                if(weight[i-1] > j)
+                    dp[i][j] = dp[i-1][j];
+                else
+                    dp[i][j] = Math.max(dp[i-1][j],dp[i-1][j-weight[i-1]]+value[i-1]);
+            }
+        }
+        //则容量为V的背包能够装入物品的最大值为
+        int maxValue = dp[N][V];
+        //逆推找出装入背包的所有商品的编号
+        int j=V;
+        String numStr="";
+        for(int i=N;i>0;i--){
+            //若果dp[i][j]>dp[i-1][j],这说明第i件物品是放入背包的
+            if(dp[i][j]>dp[i-1][j]){
+                numStr = i+" "+numStr;
+                j=j-weight[i-1];
+            }
+            if(j==0)
+                break;
+        }
+        return numStr;
+    }
+    /**
+     * 第三类背包：多重背包
+     *
+     */
+    public static int manyPack(int capacity, int n, int[] weight, int[] price, int[] num){
+        int[][] dp = new int[n+1][capacity+1];
+        for (int i = 1; i < n+1; ++i) {
+            for (int j = 1; j < capacity+1; j++) {
+                if (weight[i-1]>j)
+                    dp[i][j] = dp[i-1][j];
+                else {
+                    int maxV = Math.min(num[i-1],j/weight[i-1]);
+                    for (int k = 0; k < maxV+1; k++) {
+                        dp[i][j] = Math.max(dp[i-1][j],dp[i-1][j-k*weight[i-1]+k*price[i-1]]);
+                    }
+                }
+            }
+        }
+        /*//则容量为V的背包能够装入物品的最大值为
+        int maxValue = dp[N][V];
+        int j=V;
+        String numStr="";
+        for(int i=N;i>0;i--){
+            //若果dp[i][j]>dp[i-1][j],这说明第i件物品是放入背包的
+            while(dp[i][j]>dp[i-1][j]){
+                numStr = i+" "+numStr;
+                j=j-weight[i-1];
+            }
+            if(j==0)
+                break;
+        }*/
+        return dp[n][capacity];
+    }
+
+    /**
+     * 第二类背包：完全背包
+     * 思路分析：
+     * 01背包问题是在前一个子问题（i-1种物品）的基础上来解决当前问题（i种物品），
+     * 向i-1种物品时的背包添加第i种物品；而完全背包问题是在解决当前问题（i种物品）
+     * 向i种物品时的背包添加第i种物品。
+     * 推公式计算时，f[i][y] = max{f[i-1][y], (f[i][y-weight[i]]+value[i])}，
+     * 注意这里当考虑放入一个物品 i 时应当考虑还可能继续放入 i，
+     * 因此这里是f[i][y-weight[i]]+value[i], 而不是f[i-1][y-weight[i]]+value[i]。
+     * @param V
+     * @param N
+     * @param weight
+     * @param value
+     * @return
+     */
+    public static String completePack(int V,int N,int[] weight,int[] value){
+        //初始化动态规划数组
+        int[][] dp = new int[N+1][V+1];
+        //为了便于理解,将dp[i][0]和dp[0][j]均置为0，从1开始计算
+        for(int i=1;i<N+1;i++){
+            for(int j=1;j<V+1;j++){
+                //如果第i件物品的重量大于背包容量j,则不装入背包
+                //由于weight和value数组下标都是从0开始,故注意第i个物品的重量为weight[i-1],价值为value[i-1]
+                if(weight[i-1] > j)
+                    dp[i][j] = dp[i-1][j];
+                else
+                    dp[i][j] = Math.max(dp[i-1][j],dp[i][j-weight[i-1]]+value[i-1]);
+            }
+        }
+        //则容量为V的背包能够装入物品的最大值为
+        int maxValue = dp[N][V];
+        int j=V;
+        String numStr="";
+        for(int i=N;i>0;i--){
+            //若果dp[i][j]>dp[i-1][j],这说明第i件物品是放入背包的
+            while(dp[i][j]>dp[i-1][j]){
+                numStr = i+" "+numStr;
+                j=j-weight[i-1];
+            }
+            if(j==0)
+                break;
+        }
+        return numStr;
+    }
+    /**
+     * 完全背包的第二种解法
+     * 思路：
+     * 只用一个一维数组记录状态，dp[i]表示容量为i的背包所能装入物品的最大价值
+     * 用顺序来实现
+     */
+    public static int completePack2(int V,int N,int[] weight,int[] value){
+
+        //动态规划
+        int[] dp = new int[V+1];
+        for(int i=1;i<N+1;i++){
+            //顺序实现
+            for(int j=weight[i-1];j<V+1;j++){
+                dp[j] = Math.max(dp[j-weight[i-1]]+value[i-1],dp[j]);
+            }
+        }
+        return dp[V];
+    }
+}
+
+
+
+package algorithm;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+
+public class TSP {
+
+    private double[][] dArray; //距离矩阵
+    private int length; //距离矩阵的长度
+    private int lengthOfLength; //距离矩阵长度字符串的长度
+    private String allzero = ""; //0组成的字符串  最大值是length个(length - 1)连接起来的字符串，同样最小值是length个0连接起来
+    private String biggest ="";
+    private List<String> list = new ArrayList<String>();  //城市流列表
+    private Map<String, Double> store;   //存储中间数据
+    private String notExist = "不存在";
+    private String firnalRoad = notExist; //最终的路径，即距离矩阵的列号取值
+    private String firnalCityFlow = ""; //最终形成的城市流
+    private String min = notExist; //最终求得的最小值
+    private String allFlowTime = notExist; //求解所有城市流的时间
+    private String guihuaTime = notExist; //动态规划的时间
+
+    /** Creates a new instance of TwentyTwo */
+    public TSP(double[][] dArray) {
+        if (this.check(dArray)) {
+            this.dArray = dArray;
+            this.length = dArray.length;
+            this.lengthOfLength = (length - 1 + "").length();
+            for (int zeroLength = 0; zeroLength < (length * lengthOfLength);) {
+                allzero += 0;
+                zeroLength = allzero.length();
+            }
+            for(int i = this.length; i > 0; i--){
+                this.biggest += this.toLengthOfLength(i - 1);
+            }
+            long start = System.currentTimeMillis();
+            this.allFlow();
+            long end = System.currentTimeMillis();
+            this.allFlowTime = end - start + "毫秒";
+            start = System.currentTimeMillis();
+            this.initstoreMap();
+            this.guihua(this.length - 2);
+            end = System.currentTimeMillis();
+            this.guihuaTime = end - start + "毫秒";
+        }
+    }
+
+
+    public String getFirnalRoad() {
+        return this.firnalRoad;
+    }
+
+
+    public String getFirnalCityFlow() {
+        if ("".equals(this.firnalCityFlow)) {
+            return this.notExist;
+        }
+        return this.firnalCityFlow;
+    }
+
+
+    public String getMin() {
+        return this.min;
+    }
+
+
+    public String getAllFlowTime() {
+        return this.allFlowTime;
+    }
+
+
+    public String getGuihuaTime() {
+        return this.guihuaTime;
+    }
+    //输入距离矩阵的有效性判读
+
+
+    private boolean check(double[][] dArray) {
+        if (dArray.length < 3) {
+            System.out.println("错误信息：距离矩阵长度过小");
+            return false;
+        }
+        for (int i = 0; i < dArray.length; i++) {  // 每个double[]的长度都进行判断
+            if (dArray.length != dArray[i].length) {
+                System.out.println("错误信息：距离数组长度不合法");
+                return false;
+            }
+        }
+        for (int i = 0; i < dArray.length; i++) {
+            if (!oneZero(dArray[i], i)) {
+                System.out.println("错误信息：距离数组顺序或元素值设置不合法");
+                return false;
+            }
+        }
+        return true;
+    }
+    //对于一个doulbe类型的数组，只有第i个元素为0的判断
+
+
+    private boolean oneZero(double[] dArray, int i) {
+        int numOfZero = 0;
+        for (double d : dArray) {
+            if (d == 0.0) {
+                numOfZero++;
+            }
+        }
+        if (numOfZero == 1 && (dArray[i] == 0)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    //判断一个城市流是否合法
+
+
+    private boolean oneFlow(String str) {
+        //将一个字符串更改为一个字符链表
+        List<String> listString = new ArrayList<String>();
+        for (int i = 0; i < (this.length * this.lengthOfLength);) {
+            listString.add(str.substring(i, i + this.lengthOfLength));
+            i += this.lengthOfLength;
+        }
+        //如果有相同的元素，则false
+        for (int i = 0; i < (this.length - 1); i++) {
+            for (int j = i + 1; j < this.length; j++) {
+                if (listString.get(i * this.lengthOfLength).equals(listString.get(j * this.lengthOfLength))) {
+                    return false;
+                }
+            }
+        }
+        //如果有距离矩阵全0对角线上的元素，则false
+        for (int i = 0; i < listString.size(); i++) {
+            if (Integer.parseInt(listString.get(i)) == i) {
+                return false;
+            }
+        }
+        //排除没有遍历所有城市的情况（从0点出发到达0点）
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        for (int i = 0; i < this.length;) {
+            map.put(i, Integer.parseInt(str.substring(i, i + this.lengthOfLength)));
+            i += this.lengthOfLength;
+        }
+        int allcity = 0;
+        for (int i = 0;;) {
+            i = map.get(i);
+            allcity++;
+            if (i == 0) {
+                break;
+            }
+        }
+        if (allcity < this.length) {
+            return false;
+        }
+        return true;
+    }
+    //初始化存储map
+
+
+    private void initstoreMap() {
+        this.store = new HashMap<String, Double>();
+        //存距离矩阵最后一行可能的列号
+        for (int i = 0; i < this.length - 1; i++) {
+            this.store.put(this.toLengthOfLength(i), this.dArray[this.length - 1][i]);
+        }
+        //存距离矩阵倒数两行可能的列号
+        for (int i = 0; i < this.length; i++) {
+            if(i == this.length -2)
+                continue;
+            for (int j = 0; j < this.length - 1; j++) {
+                if (i == j) {
+                    continue;
+                }
+                store.put(this.toLengthOfLength(i) + this.toLengthOfLength(j), this.dArray[this.length - 2][i] + store.get(this.toLengthOfLength(j)));
+            }
+        }
+    }
+
+
+    //两个相近的城市流，前length - 2 - temp个数相同，后面不同，用动态规划实现
+    private void guihua(int temp) {
+        if (list.size() == 1) {
+            this.firnalRoad = list.get(0);
+            this.thePrint(list.get(0));
+            this.min = this.store.get(list.get(0)) + "";
+            return;
+        }
+        for (int i = 0; i < (list.size() - 1); i++) {
+            int next = (i + 1);
+            if (list.get(i).substring(0, temp * this.lengthOfLength).equals(list.get(next).substring(0, temp * this.lengthOfLength))) {
+                double iValue = 0;
+                double nextValue = 0;
+
+
+                iValue = this.dArray[temp][Integer.parseInt(list.get(i).substring(temp, temp + this.lengthOfLength))] +
+                        store.get(list.get(i).substring((temp + 1) * this.lengthOfLength));
+                nextValue = this.dArray[temp][Integer.parseInt(list.get(next).substring(temp, temp + this.lengthOfLength))] +
+                        store.get(list.get(next).substring((temp + 1) * this.lengthOfLength));
+
+
+                this.store.put(list.get(i).substring(temp * this.lengthOfLength), iValue);
+                this.store.put(list.get(next).substring(temp * this.lengthOfLength), nextValue);
+
+
+                if (iValue >= nextValue) {
+                    list.remove(i);
+                } else {
+                    list.remove(next);
+                }
+                i--;
+            }
+        }
+        this.guihua(temp - 1);
+    }
+    //组成所有的城市流
+
+
+    private void allFlow() {
+        while (!this.biggest.equals(this.allzero)) {
+            this.allzero = this.addone(this.allzero);
+            if (this.oneFlow(this.allzero)) {
+                this.list.add(this.allzero);
+            }
+        }
+    }
+    //将length进制的字符串加1操作
+
+
+    private String addone(String str) {
+        List<String> listString = new ArrayList<String>();
+        for (int i = 0; i < (this.length * this.lengthOfLength);) {
+            listString.add(str.substring(i, i + this.lengthOfLength));
+            i += this.lengthOfLength;
+        }
+        for (int i = (length - 1); i > -1; i--) {
+            int last = Integer.parseInt(listString.get(i));
+            if (last == (length - 1)) {
+                last = 0;
+                String strLast = this.toLengthOfLength(last);
+                listString.set(i, strLast);
+            } else {
+                last++;
+                String strLast = this.toLengthOfLength(last);
+                listString.set(i, strLast);
+                break;
+            }
+        }
+        String ret = "";
+        for (String s : listString) {
+            ret += s;
+        }
+        return ret;
+    }
+    //如果一个int字符串长度不够lengthOfLength 则补足
+
+
+    private String toLengthOfLength(Object i) {
+        String returnString = i.toString();
+        while (returnString.length() < this.lengthOfLength) {
+            returnString = (0 + returnString);
+        }
+        return returnString;
+    }
+    //将一个字符串键值映射，并标准输出
+
+
+    private void thePrint(String str) {
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        for (int i = 0; i < this.length;) {
+            map.put(i, Integer.parseInt(str.substring(i, i + this.lengthOfLength)));
+            i += this.lengthOfLength;
+        }
+        String cityFlow = this.toLengthOfLength(0);
+        for (int i = 0;;) {
+            i = map.get(i);
+            cityFlow += this.toLengthOfLength(i);
+            if (i == 0) {
+                break;
+            }
+        }
+        for (int i = 0; i < this.length + 1;) {
+            if (i < (this.length)) {
+                this.firnalCityFlow += Integer.parseInt(cityFlow.substring(i, i + this.lengthOfLength)) + "->";
+            } else {
+                this.firnalCityFlow += Integer.parseInt(cityFlow.substring(i, i + this.lengthOfLength));
+            }
+            i += this.lengthOfLength;
+        }
+    }
+
+
+    public static void main(String[] args) {
+        double[][] first = {	//各个节点之间路径长度的二维数组
+                {0, 2, 1, 3, 4, 5, 5, 6},
+                {1, 0, 4, 4, 2, 5, 5, 6},
+                {5, 4, 0, 2, 2, 6, 5, 6},
+                {5, 2, 2, 0, 3, 2, 5, 6},
+                {4, 2, 4, 2, 0, 3, 5, 6},
+                {4, 2, 4, 2, 3, 0, 5, 6},
+                {4, 2, 4, 2, 4, 3, 0, 6},
+                {4, 2, 4, 2, 8, 3, 5, 0}};
+        long start = System.currentTimeMillis();
+        TSP ff = new TSP(first);
+        System.out.println("路径是：" + ff.getFirnalRoad());
+        System.out.println("城市顺序：" + ff.getFirnalCityFlow());
+        System.out.println("最小值：" + ff.getMin());
+        System.out.println("生成所有合法城市流用时：" + ff.getAllFlowTime());
+        System.out.println("动态规划求解过程用时：" + ff.getGuihuaTime());
+    }
+}
+
+
+
+package leetcode;
+/*Merge Two Binary Trees*/
+
+
+ class TreeNode {
+      int val;
+      TreeNode left;
+      TreeNode right;
+      TreeNode(int x) { val = x; }
+  }
+
+public class Solution_1 {
+    public TreeNode mergeTrees(TreeNode t1, TreeNode t2){
+        if (t1 == null){
+            t1 = t2;
+            return t1;
+        }
+        if (t2 == null)
+            return t1;
+
+        t1.val += t2.val;
+        TreeNode newL = mergeTrees(t1.left,t2.left);
+        TreeNode newR = mergeTrees(t1.right,t2.right);
+        t1.left = newL;
+        t1.right = newR;
+        return t1;
+    }
+}
+
+
+package leetcode;
+/*maxDepth of BinaryTree*/
+public class Solution_2 {
+    public int maxDepth(TreeNode root) {
+        int maxDepth = 0;
+        int left = 0;
+        int right = 0;
+        if (root == null)
+            return maxDepth;
+        left = maxDepth(root.left) + 1;
+        right = maxDepth(root.right) + 1;
+        maxDepth = left>right ? left : right;
+        return maxDepth;
+    }
+}
+
+/*
+    public int maxDepth(TreeNode root) {
+        if(root==null){
+            return 0;
+        }
+        return 1+Math.max(maxDepth(root.left),maxDepth(root.right));
+    }
+}*/
+
+
+
+
