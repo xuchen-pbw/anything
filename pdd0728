@@ -208,3 +208,443 @@ String s = "1000";
 int n = Integer.parseInt(s);
 Integer k = Integer.valueOf(s);222222
 
+package littlecase.tencent;
+
+import java.util.Arrays;
+import java.util.Scanner;
+/*纸牌游戏
+        牛牛和羊羊正在玩一个纸牌游戏。这个游戏一共有n张纸牌, 第i张纸牌上写着数字ai。
+        牛牛和羊羊轮流抽牌, 牛牛先抽, 每次抽牌他们可以从纸牌堆中任意选择一张抽出, 直到纸牌被抽完。
+        他们的得分等于他们抽到的纸牌数字总和。
+        现在假设牛牛和羊羊都采用最优策略, 请你计算出游戏结束后牛牛得分减去羊羊得分等于多少。
+        输入描述:
+        输入包括两行。
+        第一行包括一个正整数n(1 <= n <= 105),表示纸牌的数量。
+        第二行包括n个正整数ai(1 <= ai <= 109),表示每张纸牌上的数字。
+        输出描述:
+        输出一个整数, 表示游戏结束后牛牛得分减去羊羊得分等于多少。
+        输入例子1:
+        3
+        2 7 4
+        输出例子1:
+        5*/
+public class M_cardGame_0815 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int[] num = new int[n];
+        long nn = 0;
+        long yy = 0;
+        boolean falg = true;
+        for (int i = 0; i < num.length; i++) {
+            num[i] = scanner.nextInt();
+        }
+        Arrays.sort(num);
+        for (int i = n-1; i >= 0; i--) {
+            if (falg){
+                nn = nn + num[i];
+                falg = false;
+            }else {
+                yy = yy + num[i];
+                falg = true;
+            }
+        }
+        System.out.println(nn-yy);
+    }
+}
+
+
+
+
+package littlecase.tencent;
+
+import java.util.Scanner;
+
+public class M_swallowerQ_0815 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int M = scanner.nextInt();
+        getMax(n, M);//找出1到M中的一个值，是第一天吃巧克力的数量。
+
+    }
+
+    // 使用二分法进行判断
+    public static void getMax(int outDays, int chocolateNum){
+
+        int left = 1, right = chocolateNum;
+
+        while(left <= right) {
+            int mid = (left + right) / 2;
+
+            boolean enough = true;      // 用于记录巧克力的数量是否足够，不足时需要减少第一天吃的数量，充足则增大第一天吃的数量
+            int remain = chocolateNum;      // 剩余的巧克力的数量
+            int eat = mid;          // 第一天吃的巧克力的数量
+
+            for (int i = 0; i < outDays; i ++) {
+                if (remain < eat) {
+                    enough = false;
+                    break;
+                }
+                remain -= eat;      // 巧克力的剩余量
+                eat = (eat+1) / 2;     // 之后需要吃的巧克力的数量，向上取整
+            }
+
+            if (enough) {  // 巧克力数量充足，增大第一天吃的数量
+                left = mid + 1;
+            } else {    // 巧克力数量不足，需要减少第一天吃的数量，
+                right = mid - 1;
+            }
+        }
+        System.out.println(right);
+    }
+}
+
+
+#include <stdio.h>
+long long c[105][105];
+const int mod = 1000000007;
+void init()   //计算组合数
+{
+	c[0][0] = 1;
+	for(int i = 1;i <= 100;i++)
+	{
+		c[i][0] = 1;
+		for(int j = 1;j <= 100;j++)
+		c[i][j] = (c[i - 1][j - 1] + c[i - 1][j]) % mod;
+	}
+}
+ 
+int main()
+{
+    int k;                //歌单总长度
+	int a;                //长度为a的歌 
+	int b;                //长度为b的歌 
+	int x;                //长度为a的歌有x首
+	int y;                //长度为b的歌有y首
+	long long ans = 0;    //组成歌单的种类数
+	init();
+	scanf("%d",&k);
+	scanf("%d%d%d%d",&a,&x,&b,&y);
+	for(int i = 0;i <= x;i++)
+	{
+		if(i * a <= k && (k - i * a) % b == 0 && (k - i * a) / b <= y) //满足题目的判断条件
+		{
+			ans = (ans + (c[x][i] * c[y][(k - i * a) / b]) % mod) % mod;
+		}
+	}
+	printf("%lld\n",ans);
+    return 0;
+}
+
+package littlecase.bytedance;
+
+import java.util.*;
+/*字符串S由小写字母构成，长度为n。定义一种操作，每次都可以挑选字符串中任意的两个相邻字母进行交换。
+        询问在至多交换m次之后，字符串中最多有多少个连续的位置上的字母相同？
+        示例1
+        输入
+        abcbaa 2
+        输出
+        2*/
+public class M_alphabetChange_0808 {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        String s=scan.next();
+        int m=scan.nextInt();
+        char[] chars=s.toCharArray();
+        Map<Character,ArrayList<Integer>> map=new HashMap<Character,ArrayList<Integer>>();
+        for(int i=0;i<chars.length;i++){
+            char key=chars[i];
+            if(map.containsKey(key)){
+                ArrayList<Integer> list=map.get(key);
+                list.add(i);
+            }else{
+                ArrayList<Integer> list=new ArrayList<Integer>();
+                list.add(i);
+                map.put(key,list);
+            }
+        }
+        int count=0;
+        /*int max = Integer.MIN_VALUE;*/
+        for(int i=0;i<26;i++) {
+            char key=(char) ('a'+i);
+            ArrayList<Integer> list=map.get(key);
+            if(list!=null)
+            {
+                //j代表新坐标系下标，list.get(j)为第下标为j的字母在原始数组中的下标
+                //dp为 新坐标系中两个字母对应的原始坐标区间合成连续字母串所需步数
+                //第一个下标已确定，连续长度len已确定，则第二个下标不可能超过list.size()
+                //j+1到j所需操作步数（即空格数）为list.get(j+1)-list.get(j)-1
+                //j+len-2所在字母经操作后已移到原始坐标list.get(j+1)+(len-2-1)处
+                //j+len-1到j+len-2所需操作步数（即空格数）为list.get(j+len-1)-[list.get(j+1)+(len-2-1)]-1
+                // list.get(j+1)-list.get(j)-1   +    list.get(j+len-1)-[list.get(j+1)+(len-2-1)]-1
+                //=list.get(j+len-1) - list.get(j) + 1 -len
+                //或者直接计算空格数，有多少空格，两端字母就移动几次：j+len-1,j区间共有len个字母(包括两端)
+                //则空格数为： list.get(j+len-1) - list.get(j) + 1 -len;
+                int[][] dp = new int[list.size()][list.size()];
+                for(int len=2;len<=list.size();len++) {
+                    for (int j = 0; j + len - 1 < list.size(); j ++) {
+                        dp[j][j+len-1] = dp[j+1][j+len-2] + list.get(j+len-1) - list.get(j) + 1 -len;
+                        if (dp[j][j+len-1] <= m && count < len)
+                            count = len;
+                    }
+                }
+
+/*                for (int j = 0; j < list.size()-1; j++) {
+                    if (list.get(j)-list.get(j+1)<=m){
+                        count++;
+                        max = Math.max(max,count);
+                    }else {
+                        count = 1;
+                    }
+                }*/
+            }
+           /* count = 1;*/
+        }
+        System.out.println(count);
+    }
+
+    public static void solution( ) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();
+        int m = sc.nextInt();
+        Map<Character, List> map = new HashMap<Character, List>(26); // key为字符串中的每个字母，value记录该字母在字符串中出现的位置
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            List list = map.get(c);
+            if (list == null)
+                map.put(c, list = new ArrayList<Integer>(100));
+            list.add(i);
+        }
+        int maxLen = 1; // 记录连续最长的相同字母数量
+        // 遍历map
+        for (Map.Entry<Character, List> entry : map.entrySet()) {
+            List<Integer> arrayList = entry.getValue();
+            // 遍历字母在字符串中出现的位置
+            for (int i = 0; i < arrayList.size(); i++) {
+                int ctr = arrayList.get(i); // 以当前遍历的元素位置为中心，计算其他相同元素到到该中心需移动的步数
+                int[] move = new int[arrayList.size()];
+                // 获取 move[]，表示每个相同字母到中心点 ctr 需要移动的最少步数
+                for (int j = 0; j < arrayList.size(); j++)
+                    move[j] = (Math.abs(arrayList.get(j) - ctr) -
+                            Math.abs(i - j));
+                // 排序后，选择移动代价最少的前 k + 1 个
+                Arrays.sort(move);
+                int sum = 0; // 记录移动步数之和
+                for (int k = 0; k < move.length; k++) {
+                    sum += move[k];
+                    if (sum > m)
+                        break;
+                    // 每有一个字母移动到中心点，该字母的连续相同数量就增加1
+                    if (k + 1 > maxLen)
+                        maxLen = k + 1;
+                }
+            }
+        }
+        System.out.println(maxLen);
+    }
+}
+
+package littlecase.bytedance;
+
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Scanner;
+/*
+作为一个手串艺人，有金主向你订购了一条包含n个杂色串珠的手串——每个串珠要么无色，要么涂了若干种颜色。
+        为了使手串的色彩看起来不那么单调，金主要求，手串上的任意一种颜色（不包含无色），在任意连续的m个串珠
+        里至多出现一次（注意这里手串是一个环形）。手串上的颜色一共有c种。现在按顺时针序告诉你n个串珠的手串上，
+        每个串珠用所包含的颜色分别有哪些。请你判断该手串上有多少种颜色不符合要求。即询问有多少种颜色在任意连续m个
+        串珠中出现了至少两次。
+        输入描述:
+        第一行输入n，m，c三个数，用空格隔开。(1 <= n <= 10000, 1 <= m <= 1000, 1 <= c <= 50) 接下来n行每行的第一个数
+        num_i(0 <= num_i <= c)表示第i颗珠子有多少种颜色。接下来依次读入num_i个数字，每个数字x表示第i颗柱子上包含第x种颜色
+        (1 <= x <= c)
+        输出描述:
+        一个非负整数，表示该手链上有多少种颜色不符需求。
+        输入例子1:
+        5 2 3
+        3 1 2 3
+        0
+        2 2 3
+        1 2
+        1 3
+        输出例子1:
+        2
+        例子说明1:
+        第一种颜色出现在第1颗串珠，与规则无冲突。
+        第二种颜色分别出现在第 1，3，4颗串珠，第3颗与第4颗串珠相邻，所以不合要求。
+        第三种颜色分别出现在第1，3，5颗串珠，第5颗串珠的下一个是第1颗，所以不合要求。
+        总计有2种颜色的分布是有问题的。
+        这里第2颗串珠是透明的。
+*/
+
+public class M_bracelet_0808_2 {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();// n个手串
+        int m = scanner.nextInt();// 间隔为m
+        int c = scanner.nextInt();// 有c种颜色
+        Map<Integer, LinkedList<Integer>> map = new HashMap<Integer, LinkedList<Integer>>();
+        for(int i = 1; i <= c; i++) {
+            map.put(i, new LinkedList<Integer>());
+        }
+
+        int total = 1;
+        while(total <= n) {
+            int num = scanner.nextInt();// 表示有多少顔色
+            for(int i = 0; i < num; i++) {
+                int color = scanner.nextInt();
+                LinkedList<Integer> linkedList = map.get(color);// 得到某種顔色的位置
+                linkedList.add(total);// 再加上此位置
+                map.put(color, linkedList);
+            }
+            total++;
+        }
+
+        int error = 0;
+        for(int i = 1; i <= c; i++) {
+            LinkedList<Integer> linkedList = map.get(i);// 得到某種顔色的位置
+            int[] array = new int[linkedList.size()];
+            int k = 0;
+            for(int j : linkedList) {
+                array[k++] = j;
+            }
+
+            for(int j = 0; j < array.length; j++) {
+                if(j + 1< array.length && array[j + 1] - array[j] < m) {
+                    error++;
+                    break;
+                } else if(j + 1== array.length && array[0] + n - array[j] < m) {
+                    error++;
+                    break;
+                }
+            }
+        }
+        System.out.println(error);
+    }
+}
+
+
+
+
+package littlecase.bytedance;
+
+import java.util.Scanner;
+/*
+房间的人数
+        有n个房间，现在i号房间里的人需要被重新分配，分配的规则是这样的：先让i号房间里的人全都出来，
+                接下来按照 i+1, i+2, i+3, ... 的顺序依此往这些房间里放一个人，n号房间的的下一个房间是1号房间，
+                直到所有的人都被重新分配。现在告诉你分配完后每个房间的人数以及最后一个人被分配的房间号x，
+                你需要求出分配前每个房间的人数。数据保证一定有解，若有多解输出任意一个解。
+                第一行两个整数n, x (2<=n<=10^5, 1<=x<=n)，代表房间房间数量以及最后一个人被分配的房间号；
+                第二行n个整数 a_i(0<=a_i<=10^9) ，代表每个房间分配后的人数。
+                输出描述:
+                输出n个整数，代表每个房间分配前的人数。
+                输入
+                3 1
+                6 5 1
+                输出
+                4 4 4*/
+
+public class M_peopleNumber_0809 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int x = scanner.nextInt() - 1;
+        long[] room = new long[n];
+        long min = Long.MAX_VALUE;
+        for (int i = 0; i < n; i++) {
+            room[i] = scanner.nextInt();
+            if (room[i] < min)
+                min = room[i];
+        }
+        //get min_index
+        int minIndex = x;
+        while (room[minIndex] != min) {
+            minIndex = minIndex > 0 ? minIndex - 1 : n - 1;
+        }
+        // remove the round number.
+        for (int i = 0; i < n; i++) {
+            room[i] -= min;
+        }
+        // remove the tail
+        int remain = 0;
+        for (int i = x; i != minIndex; i = i > 0 ? i - 1 : n - 1) {
+            room[i] -= 1;
+            remain += 1;
+        }
+        room[minIndex] += remain + n * min;
+        //print the result
+        for (int i = 0; i < n; i++) {
+            System.out.print(room[i] + " ");
+        }
+    }
+}
+
+
+
+
+package littlecase.bytedance;
+
+import java.util.Scanner;
+/*用户喜好
+        输入描述:
+        输入： 第1行为n代表用户的个数 第2行为n个整数，第i个代表用户标号为i的用户对某类文章的喜好度 第3行为一个正整数q
+        代表查询的组数  第4行到第（3+q）行，每行包含3个整数l,r,k代表一组查询，即标号为l<=i<=r的用户中对这类文章喜好值为k
+        的用户的个数。 数据范围n <= 300000,q<=300000 k是整型
+        输出描述:
+        输出：一共q行，每行一个整数代表喜好值为k的用户的个数
+        输入例子1:
+        5
+        1 2 3 3 5
+        3
+        1 2 1
+        2 4 5
+        3 5 3
+        输出例子1:
+        1
+        0
+        2
+        例子说明1:
+        样例解释:
+        有5个用户，喜好值为分别为1、2、3、3、5，
+        第一组询问对于标号[1,2]的用户喜好值为1的用户的个数是1
+        第二组询问对于标号[2,4]的用户喜好值为5的用户的个数是0
+        第三组询问对于标号[3,5]的用户喜好值为3的用户的个数是2*/
+public class Solution_1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int[] fun = new int[n+1];
+        for (int i = 1; i < n+1; i++) {
+            fun[i] = scanner.nextInt();
+        }
+        int q  = scanner.nextInt();
+        int[][] query = new int[q+1][4];
+        for (int i = 1; i < q+1; i++) {
+            for (int j = 1; j < 4; j++) {
+                query[i][j] = scanner.nextInt();
+            }
+
+        }
+
+        for (int i = 1; i <q+1; i++) {
+            int count = 0;
+            for (int k = query[i][1]; k <= query[i][2]; k++) {
+//                System.out.println("query[i][1]="+query[i][1] + "~ query[i][2]"+ query[i][2] );
+//                System.out.println("fun[k]="+fun[k]);
+                if(fun[k]==query[i][3]){
+//                    System.out.println("query[i][3]="+query[i][3]);
+                    ++count;
+                }
+
+            }
+            System.out.println(count);
+        }
+    }
+}
